@@ -11,5 +11,6 @@ reflexiva_tantum.txt - list of verbs used only in reflexive constructions
 reflexiva_tantum_scale.csv - list of verbs used only in reflexive constructions, with their frequencies in the corpus
 reflexive_parent_lemma_frequency.csv - list of verbs used in reflexive constructions, with their frequency in these constructions
 reflexive_total_parent_lemma_frequency.csv - list of verbs used in reflexive constructions, their total frequency, frequency in reflexive constructions and ratios between the frequencies
+reflexive_total_parent_lemma_ipm.csv - same as reflexive_total_parent_lemma_frequency.csv but added i.p.m
 total_parent_lemma_frequency.csv - total frequency of verbs used in reflexive constructions
 total_parent_lemma_frequency_*_*.csv - total frequency of verbs used in reflexive constructions, split by 100 words
