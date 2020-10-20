@@ -25,12 +25,3 @@ target_verbs <-  target_verbs %>%
 #for each verb, calculate how often it is used with a reflexive
 target_verbs$refexivity <- (target_verbs$reflexive_frequency / target_verbs$total_frequency)
 write.csv(target_verbs, "target_verbs_all.csv", fileEncoding = "UTF-8")
-
-#most verbs are not realy reflexive, some are eclusively reflexive, few alternate
-hist(target_verbs$refexivity)
-
-#most reflexive verbs have very low frequency -> are unknown, we exclude them
-#few have huge frequency - these are modal verbs, or highly abstact ones (be, have)
-freq <- target_verbs$total_frequency[target_verbs$total_frequency > 1000]
-freq <- freq[freq < 50000]
-hist(freq) #there are only a few reflexive verbs, that occur frequently

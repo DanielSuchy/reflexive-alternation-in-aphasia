@@ -1,0 +1,65 @@
+---
+title: "filter_target_verbs"
+output:
+  html_document:
+    df_print: paged
+---
+
+In this script, we will examine the relexive verbs, and filter them to keep only the most relevant.
+This results in a much smaller list ready for manual annotation.
+Let's take a look at how many truly reflexive verbs we have:
+
+```{r}
+library(dplyr)
+verbs <- read.csv("target_verbs_all.csv", encoding = "UTF-8")
+hist(verbs$refexivity,
+     main = "Histogram of reflexivity ratio",
+     xlab = "verbs reflexivity",
+     ylab = "how many such verbs we have")
+```
+
+We can see that most of the 'reflexive' verbs are rarely used in reflexive constructions. 
+Some are almost exclusively reflexive. 
+Few alternate between reflexive and non-reflexive use (reflexivity between 0.2 and 0.8). These are the relevant verbs.
+
+Let's take a look at how many frequently used verbs we have:
+
+```{r}
+hist(verbs$total_frequency, 
+     main = "Verb lemmas by frequency",
+     xlab = "frequency of lemma",
+     ylab = "how many such verbs we have")
+```
+
+This graph won't tell us much, but it shows that there are a few verbs with huge frequency but 99.99 percent of verbs have a very low frequency of use. 
+
+We need to get rid of the most frequent verbs, such as modals, to be, to have, and the very rare words:
+
+
+```{r}
+#most reflexive verbs have very low frequency -> are unknown, we exclude them
+#few have huge frequency - these are modal verbs, or highly abstact ones (be, have)
+freq <- verbs$total_frequency[verbs$total_frequency > 1000]
+freq <- freq[freq < 50000]
+#there are only a few reflexive verbs, that occur frequently
+hist(freq, 
+     main = "Verb lemmas by frequency",
+     xlab = "frequency of lemma",
+     ylab = "how many such verbs we have")
+```
+
+Still, it shows that there are only a few reflexive verbs that occur frequently. Most reflexive verbs are rarely used.
+
+
+
+Finally, we will filter the verbs:
+```{r}
+frequent_verbs <- verbs[verbs$total_ipm > 20 & verbs$total_ipm < 100,]
+alternating_verbs <- verbs[verbs$refexivity > 0.2 & verbs$refexivity < 0.8,]
+
+filtered_verbs <- merge(frequent_verbs, alternating_verbs, by = "lemma")
+filtered_verbs <-
+    data.frame(lemma = filtered_verbs$lemma, reflexivity = filtered_verbs$refexivity.x, total_ipm = filtered_verbs$total_ipm.x)
+write.csv(filtered_verbs, "target_verbs_filtered.csv", fileEncoding = "UTF-8")
+```
+
