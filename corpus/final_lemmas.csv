@@ -1,0 +1,32 @@
+﻿lemma;reflexivity;total_ipm;is_sem_compatible;is_anticausative;uses_double_accusative;is_visual;refl.bias;solution;common subjects;common objects
+hájit;0.245963912630579;20.8848661952439;TRUE;FALSE;FALSE;FALSE;low;ok;;
+ohlásit;0.21780388612742899;21.9459681339386;TRUE;FALSE;FALSE;FALSE;low;ok;společnost  firma  skupina  banka  sekretářka;konec  příchod  návštěva  změna  kandidatura
+prezentovat;0.24802671523983;32.6660727669199;TRUE;FALSE;FALSE;FALSE;low;ok;výsledek  firma  společnost  výstava  výrobce;výsledek  názor  projekt  práce  nabídka
+stáhnout;0.263380281690141;70.4095678946968;TRUE;FALSE;FALSE;FALSE;low;ok;hrdlo  žaludek  obličej  tvář  obvinění  uživatel;ruka  okénko  kalhoty  aplikace  vlas
+ponořit;0.590254237288136;23.4037436945753;TRUE;FALSE;FALSE;TRUE;high;ok;místnost  dům  pokoj  slámka  člověk  město;ruka  hlava  prst  noha  obličej  lžíce
+trápit;0.279937521693856;57.1408352407384;TRUE;FALSE;FALSE;FALSE;low;ok;otázka  žena  problém  člověk  bolest;problém  člověk  svědomí  obyvatel  rok  zranění
+vzbudit;0.211966604823748;42.7614164453426;TRUE;FALSE;FALSE;FALSE;low;ok;zájem  kniha  zpráva  případ  dítě;pozornost  zájem  podezření  dojem rozruch
+zapsat;0.291854666350036;41.7598155499392;TRUE;FALSE;TRUE;TRUE;low;ok;rodič  jméno  otec  číslo  člověk;číslo  jméno  slovo  rovnice  datum
+naklonit;0.716154032453378;40.9466346249582;TRUE;FALSE;FALSE;TRUE;high;ok;hlava  muž  žena  loď  kolébka;hlava  ucho  láhev  sklenice  obličej
+omluvit;0.761816838995569;26.8548042054703;TRUE;FALSE;FALSE;FALSE;high;ok;jména  matka  člověk  muž  rodič;neúčast  chování  nepřítomnost  manžel  žena
+přestěhovat;0.796875;29.8298563700349;TRUE;FALSE;FALSE;FALSE;high;ok;rodina  rodič  matka  úřad  škola;rodina  věc  nábytek  kancelář  firma
+rozesmát;0.753471046393498;29.2844301398647;TRUE;FALSE;FALSE;TRUE;high;ok;jména  žena  muž  myšlenka  poznámka;člověk  divák  publikum  sál  dítě  pacient
+vypravit;0.655991363799928;27.5588998844172;TRUE;FALSE;FALSE;FALSE;high;ok;jména  rodina  společnost  transport  autobus;slovo  den  hláska  vlak  pohřeb  autobus
+zaměřit;0.614521557941978;61.8711681823962;TRUE;FALSE;FALSE;FALSE;high;ok;výzkum  pozornost  část  policista  program  projekt;pozornost  úsilí  výzkum  příď
+zbavit;0.656691203089176;82.1808576258243;TRUE;FALSE;FALSE;FALSE;high;ok;vlastní jména  člověk  stát  soud  společnost;tělo  svět  člověk  závislost  možnost  podezření  obvinění
+probudit;0.617431604126177;66.3337464292432;TRUE;FALSE;FALSE;TRUE;high;ok;vlastní jména  člověk  dítě  muž  žena  matka;zájem  touha  zvědavost  žena  muž  instinkt
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
+;;;;;;;;;;
