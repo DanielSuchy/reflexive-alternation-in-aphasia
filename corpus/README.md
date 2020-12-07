@@ -19,6 +19,7 @@ candidate_lemmas.csv - created from target_verbs_manual using filter_candidate_l
 	*is_sem compatible is TRUE, is_anticausative is FALSE
 	*these verbs were manually verified in the corpus, to make sure that the above is true
 final_lemmas.csv - final list of lemmas that will be used in the experiment. Manually created from candidate_lemmas.csv
-sentences.csv - list of sentences, that will be used in the experiment. Based on final_lemmas.csv
+sentence_group_1.csv - list of sentences, that will be used in the experiment. Based on final_lemmas.csv
+sentence_group_2.csv - list of sentences, that will be used in the experiment. Same as sentence_group_1, just with different subjects, objects. Based on final_lemmas.csv
 
 	
