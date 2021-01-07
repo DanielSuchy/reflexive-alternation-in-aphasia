@@ -1,17 +1,17 @@
-﻿reflexivity;lemma;reflexive-grammatical;reflexive-agrammatical;transitive-grammatical;transitive-agrammatical
-high;ponořit;Plavec se ponořil pod vodu;Plavec ponořil pod vodu;Plavec ponořil hlavu pod vodu;Plavec se ponořil hlavu pod vodu
-high;naklonit;Kuchař se naklonil nad umyvadlo;Kuchař naklonil nad umyvadlo;Kuchař naklonil hrnec nad umyvadlo;Kuchař se naklonil hrnec nad umyvadlo
-high;přestěhovat;Dělník se přestěhoval do bytu;Dělník přestěhoval do bytu;Dělník přestěhoval nábytek do bytu;Dělník se přestěhoval nábytek do bytu
-high;rozesmát;Herec se rozesmál po představení;Herec rozesmál po představení;Herec rozesmál publikum po představení;Herec se rozesmál publikum po představení
-high;vypravit;Dispečer se vypravil do Prahy;Dispečer vypravil do Prahy;Dispečer vypravil vlak do Prahy;Dispečer se vypravil vlak do Prahy
-high;zaměřit;Úředník se zaměřil na stížnost;Úředník zaměřil na stížnost;Úředník zaměřil pozornost na stížnost;Úředník se zaměřil pozornost na stížnost
-high;zbavit;Psycholog se zbavil stresu;Psycholog zbavil stresu;Psycholog zbavil klienta stresu;Psycholog se zbavil klienta stresu
-high;probudit;Dědeček se probudil v devět hodin;Dědeček probudil v devět hodin;Dědeček probudil vnuka v devět hodin;Dědeček se probudil vnuka v devět hodin
-low;hájit;Podnikatel se hájil před soudem;Podnikatel hájil před soudem;Podnikatel hájil firmu před soudem;Podnikatel se hájil firmu před soudem
-low;ohlásit;Asistent se ohlásil v telefonu;Asistent ohlásil v telefonu;Asistent ohlásil návštěvu v telefonu;Asistent se ohlásil návštěvu v telefonu
-low;oddělit;Učitel se oddělil od skupiny;Učitel oddělil od skupiny;Učitel oddělil děti od skupiny;Učitel se oddělil děti od skupiny
-low;stáhnout;Trenér se stáhl z hřiště;Trenér stáhl z hřiště;Trenér stáhl fotbalistu z hřiště;Trenér se stáhl fotbalistu z hřiště
-low;trápit;Číšník se trápil hladem;Číšník trápil hladem;Číšník trápil hosty hladem;Číšník se trápil hosty hladem
-low;vzbudit;Tatínek se vzbudil včas;Tatínek vzbudil včas;Tatínek vzbudil dceru včas;Tatínek se vzbudil dceru včas
-low;zapsat;Student se zapsal do sešitu;Student zapsal do sešitu;Student zapsal datum do sešitu;Student se zapsal datum do sešitu
-low;spojit;Generál se spojil s nepřítelem;Generál spojil s nepřítelem;Generál spojil síly s nepřítelem;Generál se spojil síly s nepřítelem
+﻿lemma_id;lemma_arguments_id;reflexivity;lemma;reflexive-grammatical;reflexive-agrammatical;transitive-grammatical;transitive-agrammatical
+1;1;high;ponořit;Plavec se ponořil pod vodu;Plavec ponořil pod vodu;Plavec ponořil hlavu pod vodu;Plavec se ponořil hlavu pod vodu
+2;2;high;naklonit;Kuchař se naklonil nad umyvadlo;Kuchař naklonil nad umyvadlo;Kuchař naklonil hrnec nad umyvadlo;Kuchař se naklonil hrnec nad umyvadlo
+3;3;high;přestěhovat;Dělník se přestěhoval do bytu;Dělník přestěhoval do bytu;Dělník přestěhoval nábytek do bytu;Dělník se přestěhoval nábytek do bytu
+4;4;high;rozesmát;Herec se rozesmál po představení;Herec rozesmál po představení;Herec rozesmál publikum po představení;Herec se rozesmál publikum po představení
+5;5;high;vypravit;Dispečer se vypravil do Prahy;Dispečer vypravil do Prahy;Dispečer vypravil vlak do Prahy;Dispečer se vypravil vlak do Prahy
+6;6;high;zaměřit;Úředník se zaměřil na stížnost;Úředník zaměřil na stížnost;Úředník zaměřil pozornost na stížnost;Úředník se zaměřil pozornost na stížnost
+7;7;high;zbavit;Psycholog se zbavil stresu;Psycholog zbavil stresu;Psycholog zbavil klienta stresu;Psycholog se zbavil klienta stresu
+8;8;high;probudit;Dědeček se probudil v devět hodin;Dědeček probudil v devět hodin;Dědeček probudil vnuka v devět hodin;Dědeček se probudil vnuka v devět hodin
+9;9;low;hájit;Podnikatel se hájil před soudem;Podnikatel hájil před soudem;Podnikatel hájil firmu před soudem;Podnikatel se hájil firmu před soudem
+10;10;low;ohlásit;Asistent se ohlásil v telefonu;Asistent ohlásil v telefonu;Asistent ohlásil návštěvu v telefonu;Asistent se ohlásil návštěvu v telefonu
+11;11;low;oddělit;Učitel se oddělil od skupiny;Učitel oddělil od skupiny;Učitel oddělil děti od skupiny;Učitel se oddělil děti od skupiny
+12;12;low;stáhnout;Trenér se stáhl z hřiště;Trenér stáhl z hřiště;Trenér stáhl fotbalistu z hřiště;Trenér se stáhl fotbalistu z hřiště
+13;13;low;trápit;Číšník se trápil hladem;Číšník trápil hladem;Číšník trápil hosty hladem;Číšník se trápil hosty hladem
+14;14;low;vzbudit;Tatínek se vzbudil včas;Tatínek vzbudil včas;Tatínek vzbudil dceru včas;Tatínek se vzbudil dceru včas
+15;15;low;zapsat;Student se zapsal do sešitu;Student zapsal do sešitu;Student zapsal datum do sešitu;Student se zapsal datum do sešitu
+16;16;low;spojit;Generál se spojil s nepřítelem;Generál spojil s nepřítelem;Generál spojil síly s nepřítelem;Generál se spojil síly s nepřítelem

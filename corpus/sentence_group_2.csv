@@ -1,17 +1,17 @@
-﻿reflexivity;lemma;reflxive-grammatical;reflexive-agrammatical;transitive-grammatical;transitive-agrammatical
-high;ponořit;Sportovec se ponořil pod hladinu;Sportovec ponořil pod hladinu;Sportovec ponořil obličej pod hladinu;Sportovec se ponořil obličej pod hladinu
-high;naklonit;Soudce se naklonil ke straně;Soudce naklonil ke straně;Soudce naklonil hlavu ke straně;Soudce se naklonil hlavu ke straně
-high;přestěhovat;Ředitel se přestěhoval do Polska;Ředitel přestěhoval do Polska;Ředitel přestěhoval rodinu do Polska;Ředitel se přestěhoval rodinu do Polska
-high;rozesmát;Moderátor se rozesmál na jevišti;Moderátor rozesmál na jevišti;Moderátor rozesmál účinkující na jevišti;Moderátor se rozesmál účinkující na jevišti
-high;vypravit;Strýček se vypravil do školy;Strýček vypravil do školy;Strýček vypravil děti do školy;Strýček se vypravil děti do školy
-high;zaměřit;Vědec se zaměřil na výzkum ;Vědec zaměřil na výzkum ;Vědec zaměřil úsilí na výzkum ;Vědec se zaměřil úsilí na výzkum 
-high;zbavit;Lékař se zbavil závislosti ;Lékař zbavil závislosti ;Lékař zbavil pacienta závislosti ;Lékař se zbavil pacienta závislosti 
-high;probudit;Opilec se probudil na konečné;Opilec probudil na konečné;Opilec probudil kamaráda na konečné;Opilec se probudil kamaráda na konečné
-low;hájit;Předseda se hájil před komisí;Předseda hájil před komisí;Předseda hájil zaměstnance před komisí;Předseda se hájil zaměstnance před komisí
-low;ohlásit;Pilot se ohlásil přes vysílačku;Pilot ohlásil přes vysílačku;Pilot ohlásil přílet přes vysílačku;Pilot se ohlásil přílet přes vysílačku
-low;oddělit;Průvodce se oddělil od davu;Průvodce oddělil od davu;Průvodce oddělil turisty od davu;Průvodce se oddělil turisty od davu
-low;stáhnout;Výrobce se stáhl z trhu;Výrobce stáhl z trhu;Výrobce stáhl léky z trhu;Výrobce se stáhl léky z trhu
-low;trápit;Starosta se trápil nerozhodností;Starosta trápil nerozhodností;Starosta trápil obyvatele nerozhodností;Starosta se trápil obyvatele nerozhodností
-low;vzbudit;Tatínek se vzbudil pozdě;Tatínek vzbudil pozdě;Tatínek vzbudil sousedy pozdě;Tatínek se vzbudil sousedy pozdě
-low;zapsat;Vrátný se zapsal do kalendáře;Vrátný zapsal do kalendáře;Vrátný zapsal datum do kalendáře;Vrátný se zapsal datum do kalendáře
-low;spojit;Kancléř se spojil s ministrem;Kančléř spojil se zahraničím;Kancléř spojil prezidenta s ministrem;Kancléř se spojil prezidenta s ministrem
+﻿lemma_id;lemma_arguments_id;reflexivity;lemma;reflxive-grammatical;reflexive-agrammatical;transitive-grammatical;transitive-agrammatical
+1;17;high;ponořit;Sportovec se ponořil pod hladinu;Sportovec ponořil pod hladinu;Sportovec ponořil obličej pod hladinu;Sportovec se ponořil obličej pod hladinu
+2;18;high;naklonit;Soudce se naklonil ke straně;Soudce naklonil ke straně;Soudce naklonil hlavu ke straně;Soudce se naklonil hlavu ke straně
+3;19;high;přestěhovat;Ředitel se přestěhoval do Polska;Ředitel přestěhoval do Polska;Ředitel přestěhoval rodinu do Polska;Ředitel se přestěhoval rodinu do Polska
+4;20;high;rozesmát;Moderátor se rozesmál na jevišti;Moderátor rozesmál na jevišti;Moderátor rozesmál účinkující na jevišti;Moderátor se rozesmál účinkující na jevišti
+5;21;high;vypravit;Strýček se vypravil do školy;Strýček vypravil do školy;Strýček vypravil děti do školy;Strýček se vypravil děti do školy
+6;22;high;zaměřit;Vědec se zaměřil na výzkum ;Vědec zaměřil na výzkum ;Vědec zaměřil úsilí na výzkum ;Vědec se zaměřil úsilí na výzkum 
+7;23;high;zbavit;Lékař se zbavil závislosti ;Lékař zbavil závislosti ;Lékař zbavil pacienta závislosti ;Lékař se zbavil pacienta závislosti 
+8;24;high;probudit;Opilec se probudil na konečné;Opilec probudil na konečné;Opilec probudil kamaráda na konečné;Opilec se probudil kamaráda na konečné
+9;25;low;hájit;Předseda se hájil před komisí;Předseda hájil před komisí;Předseda hájil zaměstnance před komisí;Předseda se hájil zaměstnance před komisí
+10;26;low;ohlásit;Pilot se ohlásil přes vysílačku;Pilot ohlásil přes vysílačku;Pilot ohlásil přílet přes vysílačku;Pilot se ohlásil přílet přes vysílačku
+11;27;low;oddělit;Průvodce se oddělil od davu;Průvodce oddělil od davu;Průvodce oddělil turisty od davu;Průvodce se oddělil turisty od davu
+12;28;low;stáhnout;Výrobce se stáhl z trhu;Výrobce stáhl z trhu;Výrobce stáhl léky z trhu;Výrobce se stáhl léky z trhu
+13;29;low;trápit;Starosta se trápil nerozhodností;Starosta trápil nerozhodností;Starosta trápil obyvatele nerozhodností;Starosta se trápil obyvatele nerozhodností
+14;30;low;vzbudit;Tatínek se vzbudil pozdě;Tatínek vzbudil pozdě;Tatínek vzbudil sousedy pozdě;Tatínek se vzbudil sousedy pozdě
+15;31;low;zapsat;Vrátný se zapsal do kalendáře;Vrátný zapsal do kalendáře;Vrátný zapsal datum do kalendáře;Vrátný se zapsal datum do kalendáře
+16;32;low;spojit;Kancléř se spojil s ministrem;Kančléř spojil se zahraničím;Kancléř spojil prezidenta s ministrem;Kancléř se spojil prezidenta s ministrem
