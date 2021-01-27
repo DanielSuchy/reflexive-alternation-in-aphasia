@@ -1,0 +1,137 @@
+---
+title: "gather_results"
+output: html_document
+---
+
+Let's load the results.
+
+```{r}
+library(tidyverse)
+result_columns <- c("time", "ip_adress", "controller_name", "item_number", "element_number", "type", "group", "penn_element_type", "penn_element_name", 
+                 "parameter", "value", "event_time", "item-correct_answer-comments")
+
+results <- read.csv("results_20210127_0910.csv", header = FALSE, sep="!", encoding = "UTF-8") #use nonexistent separator to put all results into single column
+results <- filter(results, !grepl("#", V1)) #filter out comments
+results <- separate(results, V1, into = result_columns, sep=",", extra = "merge") #separate into meaningful columns
+results <- separate(results, "item-correct_answer-comments", into=c("item", "correct_answer", "comments"), sep=",", fill = "left") #some rows have extra columns
+```
+
+Everything is now stored in a single table with meaningful columns.
+How many results do we have?
+
+```{r}
+nrow(table(results$ip_adress)) 
+nrow(table(results$time))
+```
+
+We have 35 unique IP adresses and 35 unique timestamps. 
+That should mean that the are 35 partitcipants and each completed the experiment once.
+
+Who are the participants?
+```{r}
+demographics <- filter(results, penn_element_name=="demographics")
+demographics <- data.frame(ip_adress=demographics$ip_adress, parameter=demographics$parameter, value=demographics$value) #relevant columns
+demographics_tidy <- spread(demographics, parameter, value) #put variables into columns
+demographics_tidy$age <- extract_numeric(demographics_tidy$age)
+demographics_tidy <- mutate(demographics_tidy, gender=ifelse(gender == "žena", "F", as.character(gender))) # should change this in the PCIbex script
+mean(demographics_tidy$age)
+```
+Mean age is 20.5. They are all native speakers of Czech, students of philology.
+Some experience reading problems.
+
+Did they leave any comments?
+
+```{r}
+comments <- filter(results, parameter=="Final")
+```
+
+
+
+How many answers in total do we have?
+
+```{r}
+scales <- filter(results, parameter == "Choice", type == "experiment") # multiple choice answers that aren't practice
+nrow(scales)
+```
+
+We have 4480 judged items in total. As expected, each participant judged 128 items (4480 / 35 = 128)
+How many correct, incorrect and "not sure" answers do we have?
+
+```{r}
+correct <- filter(scales, (value=="dává smysl" & correct_answer==TRUE) | (value=="nedává smysl" & correct_answer==FALSE))
+incorrect <- filter(scales, (value=="dává smysl" & correct_answer==FALSE) | (value=="nedává smysl" & correct_answer==TRUE))
+not_sure <- filter(scales, value=="nejsem si jistá/ý")
+```
+
+There are 4306 correct answers, 122 incorrect and 52 indifferent answers.
+
+What items were incorrectly judged?
+
+```{r}
+incorrect_freq <- as.data.frame(table(incorrect$item))
+incorrect_freq[order(incorrect_freq$Freq, decreasing = TRUE),]
+```
+
+Most were judge incorrectly only once. Reflexive sentences are more problematic. 
+
+In what way were the judgements incorrect?
+
+```{r}
+judged_false <- filter(incorrect, value=="nedává smysl")
+
+judged_false_freq <- as.data.frame(table(judged_false$item))
+judged_false_freq[order(judged_false_freq$Freq, decreasing = TRUE),]
+```
+
+```{r}
+judged_true <- filter(incorrect, value=="dává smysl")
+
+judged_true_freq <- as.data.frame(table(judged_true$item))
+judged_true_freq[order(judged_true_freq$Freq, decreasing = TRUE),]
+```
+
+Reflexive agrammatical sentences are sometimes judged as true, even if they should be false.
+
+
+Which sentences often receive "i'm not sure" ratings?
+
+```{r}
+not_sure_freq <- as.data.frame(table(not_sure$item))
+not_sure_freq[order(not_sure_freq$Freq, decreasing = TRUE),]
+```
+
+Again, most were confusing to only a single participant. However, RA are sometimes ambivalent.
+
+How often are RA sentences confusing?
+
+```{r}
+RA_sentences <- filter(scales, grepl("_RA", item))
+RA_correct <- filter(RA_sentences, (value=="dává smysl" & correct_answer==TRUE) | (value=="nedává smysl" & correct_answer==FALSE))
+RA_incorrect <- filter(RA_sentences, (value=="dává smysl" & correct_answer==FALSE) | (value=="nedává smysl" & correct_answer==TRUE))
+RA_confusing <- filter(RA_sentences, !((value=="dává smysl" & correct_answer==TRUE) | (value=="nedává smysl" & correct_answer==FALSE))) #incorrect or unsure
+```
+
+11 percent of these judgements are incorrect or ambivalent
+7 percent are incorrect
+
+Let's calculate the reaction times.
+
+```{r}
+start_times <- filter(results, value=="Start" & type == "experiment") # start of each experimental item
+end_times <- filter(results, value=="End" & type == "experiment") # end of each experimental item
+times <- merge(x = start_times, y = end_times, by=c("item", "ip_adress"))
+times$difference <- as.numeric(times$event_time.y) - as.numeric(times$event_time.x)
+times_simple <- data.frame(ip = times$ip_adress, start=times$event_time.x, end=times$event_time.y, diff=times$difference, item=times$item)
+mean(times_simple$diff)
+sd(times_simple$diff)
+```
+
+Mean reaction time is 4.5 seconds (minus wait time implemented in the experiment)
+
+```{r}
+mean(filter(times_simple, grepl("_TG", times_simple$item))$diff)
+mean(filter(times_simple, grepl("_TA", times_simple$item))$diff)
+mean(filter(times_simple, grepl("_RG", times_simple$item))$diff)
+mean(filter(times_simple, grepl("_RA", times_simple$item))$diff)
+```
+

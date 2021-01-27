@@ -1,0 +1,129 @@
+Sentence,Answer,Item
+"Podnikatel hájil firmu před soudem.",TRUE,9_TG
+"Podnikatel se hájil firmu před soudem.",FALSE,9_TA
+"Podnikatel se hájil před soudem.",TRUE,9_RG
+"Podnikatel hájil před soudem.",FALSE,9_RA
+"Kuchař naklonil hrnec nad umyvadlo.",TRUE,2_TG
+"Kuchař se naklonil hrnec nad umyvadlo.",FALSE,2_TA
+"Kuchař se naklonil nad umyvadlo.",TRUE,2_RG
+"Kuchař naklonil nad umyvadlo.",FALSE,2_RA
+"Učitel oddělil děti od skupiny.",TRUE,11_TG
+"Učitel se oddělil děti od skupiny.",FALSE,11_TA
+"Učitel se oddělil od skupiny.",TRUE,11_RG
+"Učitel oddělil od skupiny.",FALSE,11_RA
+"Asistent ohlásil návštěvu v telefonu.",TRUE,10_TG
+"Asistent se ohlásil návštěvu v telefonu.",FALSE,10_TA
+"Asistent se ohlásil v telefonu.",TRUE,10_RG
+"Asistent ohlásil v telefonu.",FALSE,10_RA
+"Plavec ponořil hlavu pod vodu.",TRUE,1_TG
+"Plavec se ponořil hlavu pod vodu.",FALSE,1_TA
+"Plavec se ponořil pod vodu.",TRUE,1_RG
+"Plavec ponořil pod vodu.",FALSE,1_RA
+"Dědeček probudil vnuka v devět hodin.",TRUE,8_TG
+"Dědeček se probudil vnuka v devět hodin.",FALSE,8_TA
+"Dědeček se probudil v devět hodin.",TRUE,8_RG
+"Dědeček probudil v devět hodin.",FALSE,8_RA
+"Dělník přestěhoval nábytek do bytu.",TRUE,3_TG
+"Dělník se přestěhoval nábytek do bytu.",FALSE,3_TA
+"Dělník se přestěhoval do bytu.",TRUE,3_RG
+"Dělník přestěhoval do bytu.",FALSE,3_RA
+"Herec rozesmál publikum po představení.",TRUE,4_TG
+"Herec se rozesmál publikum po představení.",FALSE,4_TA
+"Herec se rozesmál po představení.",TRUE,4_RG
+"Herec rozesmál po představení.",FALSE,4_RA
+"Generál spojil síly s nepřítelem.",TRUE,16_TG
+"Generál se spojil síly s nepřítelem.",FALSE,16_TA
+"Generál se spojil s nepřítelem.",TRUE,16_RG
+"Generál spojil s nepřítelem.",FALSE,16_RA
+"Trenér stáhl fotbalistu z hřiště.",TRUE,12_TG
+"Trenér se stáhl fotbalistu z hřiště.",FALSE,12_TA
+"Trenér se stáhl z hřiště.",TRUE,12_RG
+"Trenér stáhl z hřiště.",FALSE,12_RA
+"Číšník trápil hosty hladem.",TRUE,13_TG
+"Číšník se trápil hosty hladem.",FALSE,13_TA
+"Číšník se trápil hladem.",TRUE,13_RG
+"Číšník trápil hladem.",FALSE,13_RA
+"Dispečer vypravil vlak do Prahy.",TRUE,5_TG
+"Dispečer se vypravil vlak do Prahy.",FALSE,5_TA
+"Dispečer se vypravil do Prahy.",TRUE,5_RG
+"Dispečer vypravil do Prahy.",FALSE,5_RA
+"Tatínek vzbudil dceru včas.",TRUE,14_TG
+"Tatínek se vzbudil dceru včas.",FALSE,14_TA
+"Tatínek se vzbudil včas.",TRUE,14_RG
+"Tatínek vzbudil včas.",FALSE,14_RA
+"Úředník zaměřil pozornost na stížnost.",TRUE,6_TG
+"Úředník se zaměřil pozornost na stížnost.",FALSE,6_TA
+"Úředník se zaměřil na stížnost.",TRUE,6_RG
+"Úředník zaměřil na stížnost.",FALSE,6_RA
+"Student zapsal datum do sešitu.",TRUE,15_TG
+"Student se zapsal datum do sešitu.",FALSE,15_TA
+"Student se zapsal do sešitu.",TRUE,15_RG
+"Student zapsal do sešitu.",FALSE,15_RA
+"Psycholog zbavil klienta stresu.",TRUE,7_TG
+"Psycholog se zbavil klienta stresu.",FALSE,7_TA
+"Psycholog se zbavil stresu.",TRUE,7_RG
+"Psycholog zbavil stresu.",FALSE,7_RA
+"Předseda hájil zaměstnance před komisí.",TRUE,25_TG
+"Předseda se hájil zaměstnance před komisí.",FALSE,25_TA
+"Předseda se hájil před komisí.",TRUE,25_RG
+"Předseda hájil před komisí.",FALSE,25_RA
+"Soudce naklonil hlavu ke straně.",TRUE,18_TG
+"Soudce se naklonil hlavu ke straně.",FALSE,18_TA
+"Soudce se naklonil ke straně.",TRUE,18_RG
+"Soudce naklonil ke straně.",FALSE,18_RA
+"Průvodce oddělil turisty od davu.",TRUE,27_TG
+"Průvodce se oddělil turisty od davu.",FALSE,27_TA
+"Průvodce se oddělil od davu.",TRUE,27_RG
+"Průvodce oddělil od davu.",FALSE,27_RA
+"Pilot ohlásil přílet přes vysílačku.",TRUE,26_TG
+"Pilot se ohlásil přílet přes vysílačku.",FALSE,26_TA
+"Pilot se ohlásil přes vysílačku.",TRUE,26_RG
+"Pilot ohlásil přes vysílačku.",FALSE,26_RA
+"Sportovec ponořil obličej pod hladinu.",TRUE,17_TG
+"Sportovec se ponořil obličej pod hladinu.",FALSE,17_TA
+"Sportovec se ponořil pod hladinu.",TRUE,17_RG
+"Sportovec ponořil pod hladinu.",FALSE,17_RA
+"Opilec probudil kamaráda na konečné.",TRUE,24_TG
+"Opilec se probudil kamaráda na konečné.",FALSE,24_TA
+"Opilec se probudil na konečné.",TRUE,24_RG
+"Opilec probudil na konečné.",FALSE,24_RA
+"Ředitel přestěhoval rodinu do Polska.",TRUE,19_TG
+"Ředitel se přestěhoval rodinu do Polska.",FALSE,19_TA
+"Ředitel se přestěhoval do Polska.",TRUE,19_RG
+"Ředitel přestěhoval do Polska.",FALSE,19_RA
+"Moderátor rozesmál účinkující na jevišti.",TRUE,20_TG
+"Moderátor se rozesmál účinkující na jevišti.",FALSE,20_TA
+"Moderátor se rozesmál na jevišti.",TRUE,20_RG
+"Moderátor rozesmál na jevišti.",FALSE,20_RA
+"Kancléř spojil prezidenta s ministrem.",TRUE,32_TG
+"Kancléř se spojil prezidenta s ministrem.",FALSE,32_TA
+"Kancléř se spojil s ministrem.",TRUE,32_RG
+"Kančléř spojil se zahraničím.",FALSE,32_RA
+"Výrobce stáhl léky z trhu.",TRUE,28_TG
+"Výrobce se stáhl léky z trhu.",FALSE,28_TA
+"Výrobce se stáhl z trhu.",TRUE,28_RG
+"Výrobce stáhl z trhu.",FALSE,28_RA
+"Starosta trápil obyvatele nerozhodností.",TRUE,29_TG
+"Starosta se trápil obyvatele nerozhodností.",FALSE,29_TA
+"Starosta se trápil nerozhodností.",TRUE,29_RG
+"Starosta trápil nerozhodností.",FALSE,29_RA
+"Strýček vypravil děti do školy.",TRUE,21_TG
+"Strýček se vypravil děti do školy.",FALSE,21_TA
+"Strýček se vypravil do školy.",TRUE,21_RG
+"Strýček vypravil do školy.",FALSE,21_RA
+"Tatínek vzbudil sousedy pozdě.",TRUE,30_TG
+"Tatínek se vzbudil sousedy pozdě.",FALSE,30_TA
+"Tatínek se vzbudil pozdě.",TRUE,30_RG
+"Tatínek vzbudil pozdě.",FALSE,30_RA
+"Vědec zaměřil úsilí na výzkum.",TRUE,22_TG
+"Vědec se zaměřil úsilí na výzkum.",FALSE,22_TA
+"Vědec se zaměřil na výzkum.",TRUE,22_RG
+"Vědec zaměřil na výzkum.",FALSE,22_RA
+"Vrátný zapsal datum do kalendáře.",TRUE,31_TG
+"Vrátný se zapsal datum do kalendáře.",FALSE,31_TA
+"Vrátný se zapsal do kalendáře.",TRUE,31_RG
+"Vrátný zapsal do kalendáře.",FALSE,31_RA
+"Lékař zbavil pacienta závislosti.",TRUE,23_TG
+"Lékař se zbavil pacienta závislosti.",FALSE,23_TA
+"Lékař se zbavil závislosti.",TRUE,23_RG
+"Lékař zbavil závislosti.",FALSE,23_RA
