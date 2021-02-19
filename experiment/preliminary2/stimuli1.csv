@@ -1,0 +1,65 @@
+Sentence,Answer,Group,Item,ArgumentVariation,Transitive,Grammatical
+"Podnikatel hájil firmu před soudem",TRUE,A,9_TG,hájit-1,TRUE,TRUE
+"Podnikatel se hájil firmu před soudem",FALSE,B,9_TA,hájit-1,TRUE,FALSE
+"Podnikatel se hájil před soudem",TRUE,C,9_RG,hájit-1,FALSE,TRUE
+"Podnikatel hájil před soudem",FALSE,D,9_RA,hájit-1,FALSE,FALSE
+"Kuchař naklonil hrnec nad umyvadlo",TRUE,B,2_TG,naklonit-1,TRUE,TRUE
+"Kuchař se naklonil hrnec nad umyvadlo",FALSE,C,2_TA,naklonit-1,TRUE,FALSE
+"Kuchař se naklonil nad umyvadlo",TRUE,D,2_RG,naklonit-1,FALSE,TRUE
+"Kuchař naklonil nad umyvadlo",FALSE,A,2_RA,naklonit-1,FALSE,FALSE
+"Učitel oddělil děti od skupiny",TRUE,C,11_TG,oddělit-1,TRUE,TRUE
+"Učitel se oddělil děti od skupiny",FALSE,D,11_TA,oddělit-1,TRUE,FALSE
+"Učitel se oddělil od skupiny",TRUE,A,11_RG,oddělit-1,FALSE,TRUE
+"Učitel oddělil od skupiny",FALSE,B,11_RA,oddělit-1,FALSE,FALSE
+"Asistent ohlásil návštěvu v telefonu",TRUE,D,10_TG,ohlásit-1,TRUE,TRUE
+"Asistent se ohlásil návštěvu v telefonu",FALSE,A,10_TA,ohlásit-1,TRUE,FALSE
+"Asistent se ohlásil v telefonu",TRUE,B,10_RG,ohlásit-1,FALSE,TRUE
+"Asistent ohlásil v telefonu",FALSE,C,10_RA,ohlásit-1,FALSE,FALSE
+"Plavec ponořil hlavu pod vodu",TRUE,A,1_TG,ponořit-1,TRUE,TRUE
+"Plavec se ponořil hlavu pod vodu",FALSE,B,1_TA,ponořit-1,TRUE,FALSE
+"Plavec se ponořil pod vodu",TRUE,C,1_RG,ponořit-1,FALSE,TRUE
+"Plavec ponořil pod vodu",FALSE,D,1_RA,ponořit-1,FALSE,FALSE
+"Dědeček probudil vnuka v devět hodin",TRUE,B,8_TG,probudit-1,TRUE,TRUE
+"Dědeček se probudil vnuka v devět hodin",FALSE,C,8_TA,probudit-1,TRUE,FALSE
+"Dědeček se probudil v devět hodin",TRUE,D,8_RG,probudit-1,FALSE,TRUE
+"Dědeček probudil v devět hodin",FALSE,A,8_RA,probudit-1,FALSE,FALSE
+"Dělník přestěhoval nábytek do bytu",TRUE,C,3_TG,přestěhovat-1,TRUE,TRUE
+"Dělník se přestěhoval nábytek do bytu",FALSE,D,3_TA,přestěhovat-1,TRUE,FALSE
+"Dělník se přestěhoval do bytu",TRUE,A,3_RG,přestěhovat-1,FALSE,TRUE
+"Dělník přestěhoval do bytu",FALSE,B,3_RA,přestěhovat-1,FALSE,FALSE
+"Herec rozesmál publikum po představení",TRUE,D,4_TG,rozesmát-1,TRUE,TRUE
+"Herec se rozesmál publikum po představení",FALSE,A,4_TA,rozesmát-1,TRUE,FALSE
+"Herec se rozesmál po představení",TRUE,B,4_RG,rozesmát-1,FALSE,TRUE
+"Herec rozesmál po představení",FALSE,C,4_RA,rozesmát-1,FALSE,FALSE
+"Generál spojil síly s nepřítelem",TRUE,A,16_TG,spojit-1,TRUE,TRUE
+"Generál se spojil síly s nepřítelem",FALSE,B,16_TA,spojit-1,TRUE,FALSE
+"Generál se spojil s nepřítelem",TRUE,C,16_RG,spojit-1,FALSE,TRUE
+"Generál spojil s nepřítelem",FALSE,D,16_RA,spojit-1,FALSE,FALSE
+"Trenér stáhl fotbalistu z hřiště",TRUE,B,12_TG,stáhnout-1,TRUE,TRUE
+"Trenér se stáhl fotbalistu z hřiště",FALSE,C,12_TA,stáhnout-1,TRUE,FALSE
+"Trenér se stáhl z hřiště",TRUE,D,12_RG,stáhnout-1,FALSE,TRUE
+"Trenér stáhl z hřiště",FALSE,A,12_RA,stáhnout-1,FALSE,FALSE
+"Číšník trápil hosty hladem",TRUE,C,13_TG,trápit-1,TRUE,TRUE
+"Číšník se trápil hosty hladem",FALSE,D,13_TA,trápit-1,TRUE,FALSE
+"Číšník se trápil hladem",TRUE,A,13_RG,trápit-1,FALSE,TRUE
+"Číšník trápil hladem",FALSE,B,13_RA,trápit-1,FALSE,FALSE
+"Dispečer vypravil vlak do Prahy",TRUE,D,5_TG,vypravit-1,TRUE,TRUE
+"Dispečer se vypravil vlak do Prahy",FALSE,A,5_TA,vypravit-1,TRUE,FALSE
+"Dispečer se vypravil do Prahy",TRUE,B,5_RG,vypravit-1,FALSE,TRUE
+"Dispečer vypravil do Prahy",FALSE,C,5_RA,vypravit-1,FALSE,FALSE
+"Tatínek vzbudil dceru včas",TRUE,A,14_TG,vzbudit-1,TRUE,TRUE
+"Tatínek se vzbudil dceru včas",FALSE,B,14_TA,vzbudit-1,TRUE,FALSE
+"Tatínek se vzbudil včas",TRUE,C,14_RG,vzbudit-1,FALSE,TRUE
+"Tatínek vzbudil včas",FALSE,D,14_RA,vzbudit-1,FALSE,FALSE
+"Úředník zaměřil pozornost na stížnost",TRUE,B,6_TG,zaměřit-1,TRUE,TRUE
+"Úředník se zaměřil pozornost na stížnost",FALSE,C,6_TA,zaměřit-1,TRUE,FALSE
+"Úředník se zaměřil na stížnost",TRUE,D,6_RG,zaměřit-1,FALSE,TRUE
+"Úředník zaměřil na stížnost",FALSE,A,6_RA,zaměřit-1,FALSE,FALSE
+"Student zapsal výsledky při odchodu",TRUE,C,15_TG,zapsat-1,TRUE,TRUE
+"Student se zapsal výsledky při odchodu",FALSE,D,15_TA,zapsat-1,TRUE,FALSE
+"Student se zapsal při odchodu",TRUE,A,15_RG,zapsat-1,FALSE,TRUE
+"Student zapsal při odchodu",FALSE,B,15_RA,zapsat-1,FALSE,FALSE
+"Psycholog zbavil klienta stresu",TRUE,D,7_TG,zbavit-1,TRUE,TRUE
+"Psycholog se zbavil klienta stresu",FALSE,A,7_TA,zbavit-1,TRUE,FALSE
+"Psycholog se zbavil stresu",TRUE,B,7_RG,zbavit-1,FALSE,TRUE
+"Psycholog zbavil stresu",FALSE,C,7_RA,zbavit-1,FALSE,FALSE
