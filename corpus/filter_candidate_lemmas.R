@@ -8,9 +8,12 @@ df <- read.csv("target_verbs_manual.csv", encoding = "UTF-8")
 
 glimpse(df)
 
-refl_density <- df %>% filter(is_sem_compatible == T & is_anticausative == F) %>% ggplot(aes(x = reflexivity)) + geom_density()
+refl_density <- df %>% filter(is_sem_compatible == T & is_anticausative == F) %>% ggplot(aes(x = reflexivity)) + 
+  geom_density(size=1.2)
 
-refl_density
+refl_density +
+  geom_rect(aes(xmin=0.2, xmax=0.3, ymin=0, ymax=Inf), fill="orange", alpha=0.002, inherit.aes = FALSE) +
+  geom_rect(aes(xmin=0.6, xmax=0.8, ymin=0, ymax=Inf), fill="orange", alpha=0.002, inherit.aes = FALSE)
 
 ## just eyeballing: refl low ~ .2-.3 & refl h ~ .6-.8
 
