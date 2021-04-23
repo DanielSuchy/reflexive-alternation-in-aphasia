@@ -1,0 +1,177 @@
+---
+title: "gather_results"
+output: html_document
+---
+
+Let's load the results.
+
+```{r}
+library(tidyverse)
+library(ggplot2)
+result_columns <- c("time", "ip_adress", "controller_name", "item_number", "element_number", "type", "group", "penn_element_type", "penn_element_name", 
+                 "parameter", "value", "event_time", "item-correct_answer-comments")
+
+results <- read.csv("results_20210415.csv", header = FALSE, sep="!", encoding = "UTF-8") #use nonexistent separator to put all results into single column
+results <- filter(results, !grepl("#", V1)) #filter out comments
+results <- separate(results, V1, into = result_columns, sep=",", extra = "merge") #separate into meaningful columns
+results <- separate(results, "item-correct_answer-comments", 
+                    into=c("item", "correct_answer","sentence", "transitive", "grammatical","comments"), 
+                    sep=",", fill = "left") #some rows have extra columns
+```
+
+Everything is now stored in a single table with meaningful columns.
+How many results do we have?
+
+```{r}
+nrow(table(results$ip_adress)) 
+nrow(table(results$time))
+```
+
+Who are the participants?
+```{r}
+demographics <- filter(results, penn_element_name=="demographics")
+demographics <- data.frame(ip_adress=demographics$ip_adress, parameter=demographics$parameter, value=demographics$value) #relevant columns
+demographics_tidy <- spread(demographics, parameter, value) #put variables into columns
+demographics_tidy$age <- extract_numeric(demographics_tidy$age)
+demographics_tidy <- mutate(demographics_tidy, gender=ifelse(gender == "žena", "F", as.character(gender))) # should change this in the PCIbex script
+mean(demographics_tidy$age)
+sd(demographics_tidy$age)
+```
+
+```{r}
+table(demographics_tidy$gender)
+table(demographics_tidy$education)
+```
+
+
+Did they leave any comments?
+
+```{r}
+comments <- filter(results, parameter=="Final")
+```
+
+How many answers in total do we have?
+
+```{r}
+judgements <- filter(results, parameter == "Selection", type == "experiment") # multiple choice answers that aren't practice
+nrow(judgements)
+items_count <- table(judgements$item)
+max(items_count)
+```
+Exclude the non-native participants:
+
+```{r}
+non_native_ip <- filter(demographics_tidy, lg == "other")$ip_adress
+nonnative_judgements <- filter(judgements, ip_adress %in% non_native_ip)
+judgements <- filter(judgements, !(ip_adress %in% non_native_ip))
+```
+
+
+Are the results different for non-native speakers?
+
+```{r}
+nonnative_correct <- filter(nonnative_judgements, (value=="positive" & correct_answer==TRUE) | (value=="negative" & correct_answer==FALSE))
+nonnative_incorrect <- filter(nonnative_judgements, (value=="positive" & correct_answer==FALSE) | (value=="negative" & correct_answer==TRUE))
+
+nrow(nonnative_correct) / (nrow(nonnative_correct) + nrow(nonnative_incorrect)) * 100
+```
+Correct ration for non-native speakers
+
+```{r}
+judgements$correct <- ifelse((judgements$value=="positive" & judgements$correct_answer==TRUE) | (judgements$value=="negative" & judgements$correct_answer==FALSE), 1, 0)
+judgements_agg <- aggregate(judgements$correct, by=list(Category=judgements$ip_adress), FUN=sum)
+judgements_agg$correct_ratio <- (judgements_agg$x / 32) * 100
+sd(judgements_agg$correct_ratio)
+nrow(filter(judgements_agg, correct_ratio==100))
+```
+
+
+How many correct, incorrect and "not sure" answers do we have in total?
+
+```{r}
+correct <- filter(judgements, (value=="positive" & correct_answer==TRUE) | (value=="negative" & correct_answer==FALSE))
+incorrect <- filter(judgements, (value=="positive" & correct_answer==FALSE) | (value=="negative" & correct_answer==TRUE))
+
+nrow(correct) / (nrow(correct) + nrow(incorrect)) * 100
+```
+
+Are the results different for people with reading problems?
+
+```{r}
+reading_prob_participants <- filter(demographics_tidy, readingProb == "yes")
+reading_prob_judgements <- filter(judgements, ip_adress %in% reading_prob_participants$ip_adress)
+reading_prob_correct <- filter(reading_prob_judgements, (value=="positive" & correct_answer==TRUE) | (value=="negative" & correct_answer==FALSE))
+reading_prob_incorrect <- filter(reading_prob_judgements, (value=="positive" & correct_answer==FALSE) | (value=="negative" & correct_answer==TRUE))
+
+nrow(reading_prob_correct) / (nrow(reading_prob_correct) + nrow(reading_prob_incorrect)) * 100
+```
+Correct ratio for each individual
+
+```{r}
+judgements$correct <- ifelse((judgements$value=="positive" & judgements$correct_answer==TRUE) | (judgements$value=="negative" & judgements$correct_answer==FALSE), 1, 0)
+judgements_agg <- aggregate(judgements$correct, by=list(Category=judgements$ip_adress), FUN=sum)
+judgements_agg$correct_ratio <- (judgements_agg$x / 32) * 100
+sd(judgements_agg$correct_ratio)
+nrow(filter(judgements_agg, correct_ratio==100))
+```
+
+
+For each sentence - how many correct and incorrect judgements do we have?
+
+```{r}
+t1 <- data.frame(table(correct$item))
+t2 <- data.frame(table(incorrect$item))
+correctness_table <- merge(t1, t2, by = "Var1", all = TRUE)
+names(correctness_table)[1] <- "sentence"
+names(correctness_table)[2] <- "correct"
+names(correctness_table)[3] <- "incorrect"
+correctness_table$incorrect[is.na(correctness_table$incorrect)] <- 0 # replace NA with 0
+correctness_table <- separate(correctness_table, "sentence", c("sentence", "sentence_type"), sep = "_")
+#correctness_table <- separate(correctness_table, "sentence_type", c("reflexivity", "grammaticality"), sep = 1)
+correctness_table$total <- correctness_table$correct + correctness_table$incorrect
+```
+
+Total number of judged sentences, by sentence type
+
+```{r}
+sentence_type_agg <- aggregate(correctness_table$total, by=list(Category=correctness_table$sentence_type), FUN=sum)
+```
+
+
+Is probability of incorrect judgment based on sentence type non-random?
+
+```{r}
+incorrect <- aggregate(correctness_table$incorrect, by=list(Category=correctness_table$sentence_type), FUN=sum)
+chisq.test(incorrect$x)
+```
+Incorrect judgment rate for ra sentences:
+
+
+
+Add reflexivity bias to results:
+
+```{r}
+correctness_table$refl_bias <- ifelse(as.numeric(correctness_table$sentence) <= 9 | 
+                                          (as.numeric(correctness_table$sentence) >= 17 & 
+                                             as.numeric(correctness_table$sentence <= 24)),
+                                        "high", "low")
+```
+
+
+Are lemmas with high reflexivity bias more likely to be judged incorrectly in non reflexive sentences?
+Are lemmas with low reflexivity bias more likely to be judged incorrectly in reflexive sentences?
+
+```{r}
+refl_incorrect <- separate(correctness_table, "sentence_type", c("reflexivity", "grammaticality"), sep = 1)
+refl_incorrect$reflexivity <- paste(refl_incorrect$reflexivity, refl_incorrect$refl_bias, sep="_")
+refl_incorrect_agg <- aggregate(refl_incorrect$incorrect, by=list(Category=refl_incorrect$reflexivity), FUN=sum)
+chisq.test(refl_incorrect_agg$x)
+```
+
+```{r}
+#high refl. bias verb in reflexive sent or low refl. bias verb in transitive sentence
+concordant <- filter(refl_incorrect_agg, Category=="R_high" | Category == "T_low") 
+#high refl. bias verb in transitive sentence or low refl. bias verb in reflexive sentence
+discordant <- filter(refl_incorrect_agg, Category=="R_low" | Category == "T_high")
+```
+
