@@ -164,6 +164,7 @@ Are lemmas with low reflexivity bias more likely to be judged incorrectly in ref
 ```{r}
 refl_incorrect <- separate(correctness_table, "sentence_type", c("reflexivity", "grammaticality"), sep = 1)
 refl_incorrect$reflexivity <- paste(refl_incorrect$reflexivity, refl_incorrect$refl_bias, sep="_")
+refl_incorrect <- filter(refl_incorrect, grammaticality=='G')
 refl_incorrect_agg <- aggregate(refl_incorrect$incorrect, by=list(Category=refl_incorrect$reflexivity), FUN=sum)
 chisq.test(refl_incorrect_agg$x)
 ```
